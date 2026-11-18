@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>苏绣｜一针一线，把江南绣进丝里</title>
+<meta name="description" content="苏绣科普：中国四大名绣之一，国家级非物质文化遗产。了解它的特点、工艺四步、双面绣技法，以及这门手艺为什么珍贵。">
+<meta name="theme-color" content="#17130F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="苏绣｜一针一线，把江南绣进丝里">
+<meta property="og:description" content="从劈丝到装裱，看一根丝线如何绣成一幅画。">
+<meta property="og:image" content="images/hero.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23A63A32'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23F4EFE4' font-family='serif'%3E苏%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"苏绣是什么？","acceptedAnswer":{"@type":"Answer","text":"苏绣是发源于江苏苏州一带的刺绣技艺，以精细、雅洁著称，与湘绣、粤绣、蜀绣并称中国四大名绣，2006 年被列入第一批国家级非物质文化遗产名录。"}},
+    {"@type":"Question","name":"苏绣和其他名绣有什么不同？","acceptedAnswer":{"@type":"Answer","text":"相对而言，苏绣更讲究细和雅：丝线劈得更细，配色偏柔和，题材多为花鸟、山水、人物，追求接近绘画的效果。"}},
+    {"@type":"Question","name":"双面绣难在哪里？","acceptedAnswer":{"@type":"Answer","text":"难在同一块底料的正反两面都要成画，而且针脚不能穿透、线头要完全藏住。起针、收针、换色都在极小的空间里完成，对眼力和手上功夫要求极高。"}},
+    {"@type":"Question","name":"一幅苏绣要做多久？","acceptedAnswer":{"@type":"Answer","text":"看题材和精细程度。小幅简单作品可能几周，精细的双面绣或大幅作品往往需要数月甚至更久。"}},
+    {"@type":"Question","name":"普通人可以学苏绣吗？","acceptedAnswer":{"@type":"Answer","text":"可以。通常从最基础的平针练起，先练针脚均匀，再学配色与劈丝。很多地方有非遗体验课和工坊，可以亲手试一次。"}},
+    {"@type":"Question","name":"苏绣现在还传承得好吗？","acceptedAnswer":{"@type":"Answer","text":"苏绣仍是活跃的非遗项目，有国家级和省级代表性传承人，也常与服装、文创、艺术设计结合，出现在今天的生活里。"}}
+  ]
+}
+</script>
+<style>
+  :root{
+    --paper:#F4EFE4;
+    --paper-2:#EAE2D2;
+    --ink:#17130F;
+    --ink-2:#2A241D;
+    --cream:#F2EADA;
+    --muted:#7A7065;
+    --muted-dark:#A99D8D;
+    --line:#D9CFBC;
+    --line-dark:rgba(242,234,218,.16);
+    --accent:#A63A32;
+    --accent-bright:#C95443;
+    --ease:cubic-bezier(0.22,1,0.36,1);
+
+    --fs-xs:12px; --fs-sm:14px; --fs-base:16px; --fs-lg:18px; --fs-xl:20px;
+    --fs-2xl:24px; --fs-3xl:30px; --fs-4xl:36px; --fs-5xl:48px; --fs-6xl:60px;
+    --fs-7xl:72px; --fs-8xl:96px;
+
+    --s-25:2px; --s-50:4px; --s-75:8px; --s-100:12px; --s-200:16px; --s-300:24px;
+    --s-400:32px; --s-500:40px; --s-600:48px; --s-700:64px; --s-800:80px; --s-900:96px;
+    --s-1000:128px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+    font-size:var(--fs-base);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
+  ::selection{background:rgba(166,58,50,.2)}
+  :focus-visible{outline:2px solid var(--accent-bright);outline-offset:3px;border-radius:2px}
+  section[id]{scroll-margin-top:var(--s-900)}
+
+  .wrap{width:100%;max-width:1280px;margin-inline:auto;padding-inline:var(--s-500)}
+
+  /* ---- text ---- */
+  .h1{font-size:var(--fs-7xl);line-height:1.16;font-weight:600;letter-spacing:.005em;margin:0;text-wrap:balance}
+  .h2{font-size:var(--fs-5xl);line-height:1.16;font-weight:600;margin:0;text-wrap:balance}
+  .h3{font-size:var(--fs-2xl);line-height:1.35;font-weight:600;margin:0;text-wrap:balance}
+  .body{font-size:var(--fs-base);line-height:1.85;font-weight:400;color:var(--muted);margin:0;text-wrap:pretty}
+  .caption{font-size:var(--fs-sm);line-height:1.5;font-weight:400;color:var(--muted);margin:0}
+  .eyebrow{font-size:var(--fs-xs);letter-spacing:.2em;font-weight:600;color:var(--accent);margin:0}
+
+  /* ---- skip ---- */
+  .skip{position:absolute;left:var(--s-300);top:-200px;z-index:9999;background:var(--ink);color:var(--cream);padding:var(--s-75) var(--s-200);border-radius:4px;font-size:var(--fs-sm);transition:top .2s var(--ease)}
+  .skip:focus{top:var(--s-200)}
+
+  /* ---- nav ---- */
+  .nav-wrap{position:fixed;top:var(--s-200);left:50%;transform:translateX(-50%);z-index:100;width:100%;display:flex;justify-content:center;padding-inline:var(--s-200);pointer-events:none}
+  .nav{
+    pointer-events:auto;display:flex;align-items:center;gap:var(--s-75);
+    background:rgba(244,239,228,.74);
+    -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+    border:1px solid rgba(217,207,188,.9);border-radius:999px;
+    padding:var(--s-50) var(--s-50) var(--s-50) var(--s-200);
+    box-shadow:0 10px 32px rgba(23,19,15,.08);
+  }
+  .brand{font-weight:600;font-size:var(--fs-lg);letter-spacing:.14em;padding-right:var(--s-75)}
+  .nav-menu{display:flex;align-items:center;gap:var(--s-25);list-style:none;margin:0;padding:0}
+  .nav-menu a{display:block;padding:var(--s-75) var(--s-200);border-radius:999px;font-size:var(--fs-sm);font-weight:600;color:var(--muted);transition:color .3s var(--ease),background-color .3s var(--ease)}
+  .nav-menu a:hover{color:var(--ink);background:rgba(23,19,15,.05)}
+  .nav-menu a[aria-current="true"]{color:var(--accent);background:rgba(166,58,50,.08)}
+
+  .nav-toggle{display:none;position:relative;width:40px;height:40px;border:1px solid var(--line);background:transparent;border-radius:999px;cursor:pointer;padding:0}
+  .nav-toggle .bar{position:absolute;left:50%;top:50%;width:16px;height:1.5px;background:var(--ink);border-radius:2px;transition:transform .5s var(--ease),opacity .5s var(--ease)}
+  .nav-toggle .bar:nth-child(1){transform:translate(-50%,-4px)}
+  .nav-toggle .bar:nth-child(2){transform:translate(-50%,4px)}
+  .nav.open .nav-toggle .bar:nth-child(1){transform:translate(-50%,-50%) rotate(45deg)}
+  .nav.open .nav-toggle .bar:nth-child(2){transform:translate(-50%,-50%) rotate(-45deg)}
+
+  /* ---- hero ---- */
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:100svh;background:var(--ink)}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:var(--s-1000) var(--s-700) var(--s-700);color:var(--cream)}
+  .hero-meta{display:flex;justify-content:space-between;align-items:center;gap:var(--s-200);font-size:var(--fs-xs);letter-spacing:.18em;color:var(--muted-dark);border-bottom:1px solid var(--line-dark);padding-bottom:var(--s-200)}
+  .hero h1{margin:var(--s-600) 0 var(--s-300);color:var(--cream);max-width:560px}
+  .hero h1 .hl{color:var(--accent-bright)}
+  .hero .body{color:var(--muted-dark);max-width:440px}
+  .hero-cta{margin-top:var(--s-500);display:flex;align-items:center;gap:var(--s-300);flex-wrap:wrap}
+  .hero-foot{margin-top:auto;padding-top:var(--s-700);display:flex;justify-content:space-between;gap:var(--s-200);font-size:var(--fs-xs);color:var(--muted-dark);letter-spacing:.08em}
+
+  .btn{display:inline-flex;align-items:center;gap:var(--s-75);padding:var(--s-100) var(--s-300);border-radius:4px;border:1px solid transparent;font-size:var(--fs-sm);font-weight:600;line-height:1.5;cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease),transform .3s var(--ease),border-color .3s var(--ease)}
+  .btn svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+  .btn:hover svg{transform:translateX(3px)}
+  .btn:active{transform:scale(.98)}
+  .btn-accent{background:var(--accent);color:var(--cream)}
+  .btn-accent:hover{background:var(--accent-bright)}
+  .btn-cream{background:transparent;border-color:var(--line-dark);color:var(--cream)}
+  .btn-cream:hover{border-color:var(--cream);background:rgba(242,234,218,.06)}
+
+  .hero-media{position:relative;overflow:hidden;min-height:560px}
+  .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero-media figcaption{position:absolute;left:var(--s-300);bottom:var(--s-300);background:rgba(23,19,15,.62);color:var(--cream);font-size:var(--fs-xs);letter-spacing:.1em;padding:var(--s-75) var(--s-100);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+
+  /* ---- marquee ---- */
+  .marquee{background:var(--accent);color:var(--cream);overflow:hidden;border-block:1px solid var(--accent)}
+  .marquee-track{display:flex;width:max-content;animation:marquee 34s linear infinite}
+  .marquee-group{display:flex;align-items:center;gap:var(--s-600);padding:var(--s-200) var(--s-300);white-space:nowrap}
+  .marquee-group span{font-size:var(--fs-xl);letter-spacing:.14em}
+  .marquee-group .dot{width:5px;height:5px;border-radius:999px;background:var(--cream);opacity:.6}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---- chapter label ---- */
+  .chapter{display:flex;align-items:center;gap:var(--s-200);font-size:var(--fs-xs);letter-spacing:.2em;color:var(--muted);margin-bottom:var(--s-600)}
+  .chapter .n{color:var(--accent);font-weight:600}
+  .chapter .rule{flex:1;height:1px;background:var(--line)}
+
+  /* ---- sections ---- */
+  .section{padding-block:var(--s-1000)}
+
+  /* ---- tagline ---- */
+  .tagline{padding-block:var(--s-1000);background:var(--paper-2);border-block:1px solid var(--line)}
+  .tagline p{max-width:1040px;margin:0 auto;text-align:center;font-size:var(--fs-6xl);line-height:1.45;font-weight:600;letter-spacing:.01em}
+  .tagline .w{color:var(--ink);opacity:.2;transition:opacity .5s var(--ease)}
+  .tagline .w.on{opacity:1}
+  .tagline .w.key.on{color:var(--accent)}
+
+  /* ---- what ---- */
+  .what-head{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-800);align-items:end;margin-bottom:var(--s-800)}
+  .what-head .body{max-width:460px}
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-500)}
+  .feature{border-top:1px solid var(--ink);padding-top:var(--s-300);display:flex;flex-direction:column;gap:var(--s-100)}
+  .feature .idx{font-size:var(--fs-xs);letter-spacing:.18em;color:var(--accent);font-weight:600}
+  .feature h3{margin-top:var(--s-50)}
+  .feature .body{font-size:var(--fs-sm);line-height:1.8}
+
+  /* ---- craft ---- */
+  .craft-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:var(--s-900)}
+  .craft-rail{position:sticky;top:var(--s-900);align-self:start}
+  .craft-rail .rail-title{margin:0 0 var(--s-200);font-size:var(--fs-xs);letter-spacing:.2em;color:var(--muted)}
+  .rail-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+  .rail-item a{display:flex;align-items:baseline;gap:var(--s-100);padding:var(--s-100) 0 var(--s-100) var(--s-200);border-left:2px solid var(--line);color:var(--muted);font-size:var(--fs-sm);transition:color .3s var(--ease),border-color .3s var(--ease)}
+  .rail-item a:hover{color:var(--ink)}
+  .rail-item .rn{font-size:var(--fs-xs);color:var(--accent);font-weight:600}
+  .rail-item.active a{color:var(--ink);border-color:var(--accent)}
+
+  .craft-steps{display:flex;flex-direction:column}
+  .craft-step{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-600);align-items:center;padding-block:var(--s-800);border-top:1px solid var(--line)}
+  .craft-step:first-child{border-top:0;padding-top:0}
+  .craft-step figure{margin:0;overflow:hidden}
+  .craft-step figure img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s var(--ease)}
+  .craft-step:hover figure img{transform:scale(1.03)}
+  .craft-step .ghost{font-size:var(--fs-8xl);line-height:.85;font-weight:600;color:transparent;-webkit-text-stroke:1px var(--line);letter-spacing:-.02em;margin-bottom:var(--s-100)}
+  .craft-step .h3{margin-bottom:var(--s-200)}
+  .craft-step .tip{margin:var(--s-300) 0 0;padding-left:var(--s-200);border-left:2px solid var(--accent);font-size:var(--fs-sm);color:var(--muted);line-height:1.75}
+
+  /* ---- technique ---- */
+  .technique{display:grid;grid-template-columns:1.1fr .9fr;background:var(--ink);color:var(--cream)}
+  .tech-media{position:relative;min-height:620px;overflow:hidden}
+  .tech-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .tech-copy{padding:var(--s-1000) var(--s-700);display:flex;flex-direction:column;justify-content:center}
+  .tech-copy .eyebrow{color:var(--accent-bright)}
+  .tech-copy h2{color:var(--cream);margin:var(--s-100) 0 var(--s-200)}
+  .tech-copy .body{color:var(--muted-dark);max-width:420px}
+  .mini-list{list-style:none;margin:var(--s-400) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--s-200);border-top:1px solid var(--line-dark);padding-top:var(--s-300)}
+  .mini-list li{display:flex;gap:var(--s-100);font-size:var(--fs-sm);color:#C9BFB0;line-height:1.75}
+  .mini-list li::before{content:"";width:5px;height:5px;border-radius:999px;background:var(--accent-bright);margin-top:9px;flex:none}
+
+  /* ---- value ---- */
+  .value-head{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-800);align-items:end;margin-bottom:var(--s-800)}
+  .value-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--s-900);align-items:center}
+  .value-grid figure{margin:0;overflow:hidden}
+  .value-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.82) contrast(1.03);transition:transform .8s var(--ease)}
+  .value-grid figure:hover img{transform:scale(1.03)}
+  .value-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+  .value-list li{padding-block:var(--s-300);border-top:1px solid var(--line);display:grid;grid-template-columns:120px 1fr;gap:var(--s-200);align-items:baseline}
+  .value-list strong{font-size:var(--fs-lg);font-weight:600}
+  .value-list span{font-size:var(--fs-sm);color:var(--muted);line-height:1.75}
+
+  /* ---- faq ---- */
+  .faq-head{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-800);align-items:end;margin-bottom:var(--s-600)}
+  .faq-list{max-width:900px}
+  details{border-top:1px solid var(--line)}
+  details:last-child{border-bottom:1px solid var(--line)}
+  summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:var(--s-200);padding:var(--s-300) 0;font-size:var(--fs-lg);font-weight:600}
+  summary::-webkit-details-marker{display:none}
+  summary .plus{position:relative;width:16px;height:16px;flex:none;transition:transform .5s var(--ease)}
+  summary .plus::before,summary .plus::after{content:"";position:absolute;background:var(--accent);border-radius:2px}
+  summary .plus::before{left:0;top:7px;width:16px;height:1.5px}
+  summary .plus::after{left:7px;top:0;width:1.5px;height:16px;transition:transform .5s var(--ease)}
+  details[open] summary .plus::after{transform:rotate(90deg);opacity:0}
+  details .answer{padding:0 0 var(--s-300);font-size:var(--fs-sm);line-height:1.85;color:var(--muted);max-width:760px}
+
+  /* ---- ending ---- */
+  .ending{background:var(--ink);color:var(--cream);text-align:center;padding-block:var(--s-1000);position:relative;overflow:hidden}
+  .ending .eyebrow{color:var(--accent-bright)}
+  .ending h2{font-size:var(--fs-7xl);color:var(--cream);margin:var(--s-200) auto 0;max-width:760px}
+  .ending .body{color:var(--muted-dark);max-width:480px;margin:var(--s-300) auto 0}
+  .ending .btn{margin-top:var(--s-500)}
+  .ending .ghost-word{position:absolute;left:50%;bottom:-.25em;transform:translateX(-50%);font-size:280px;line-height:1;font-weight:600;color:transparent;-webkit-text-stroke:1px rgba(242,234,218,.07);pointer-events:none;white-space:nowrap}
+
+  /* ---- footer ---- */
+  footer{padding-block:var(--s-500)}
+  .footer-inner{display:flex;justify-content:space-between;gap:var(--s-300);flex-wrap:wrap;align-items:center}
+  .footer-note{max-width:640px;font-size:var(--fs-xs);color:var(--muted);line-height:1.7;margin:0}
+  .footer-links{display:flex;gap:var(--s-300);font-size:var(--fs-xs);color:var(--muted)}
+  .footer-links a{border-bottom:1px solid transparent;transition:color .3s var(--ease),border-color .3s var(--ease)}
+  .footer-links a:hover{color:var(--ink);border-color:var(--line)}
+
+  /* ---- mobile panel ---- */
+  .mobile-panel{display:none}
+
+  /* ---- reveal ---- */
+  .reveal{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+    .tagline .w{opacity:1 !important;transition:none !important}
+    .marquee-track{animation:none}
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important}
+    .craft-step figure img,.value-grid img{transition:none}
+  }
+
+  /* ---- responsive ---- */
+  @media (max-width:1080px){
+    .hero-copy{padding:var(--s-1000) var(--s-500) var(--s-600)}
+    .hero h1{font-size:var(--fs-6xl)}
+    .h2{font-size:var(--fs-4xl)}
+    .tagline p{font-size:var(--fs-5xl)}
+    .value-grid,.tech-media{min-height:0}
+  }
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero-copy{padding:var(--s-1000) var(--s-300) var(--s-700);min-height:78svh}
+    .hero-media{min-height:0;height:62vw;max-height:520px}
+    .what-head,.value-head,.faq-head{grid-template-columns:1fr;gap:var(--s-300);align-items:start}
+    .craft-layout{grid-template-columns:1fr}
+    .craft-rail{display:none}
+    .features{grid-template-columns:1fr;gap:var(--s-400)}
+    .technique{grid-template-columns:1fr}
+    .tech-media{height:64vw;max-height:560px;min-height:0}
+    .tech-copy{padding:var(--s-800) var(--s-400)}
+    .value-grid{grid-template-columns:1fr;gap:var(--s-500)}
+    .value-grid img{aspect-ratio:4/3}
+    .ending .ghost-word{font-size:180px}
+    .marquee-group span{font-size:var(--fs-lg)}
+  }
+  @media (max-width:840px){
+    .nav{width:100%;justify-content:space-between;padding:var(--s-50) var(--s-75) var(--s-50) var(--s-300);border-radius:999px}
+    .nav-toggle{display:block}
+    .nav-menu{display:none}
+    .mobile-panel{
+      position:fixed;inset:0;z-index:95;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--s-200);
+      background:rgba(23,19,15,.97);color:var(--cream);
+      -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+      opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s var(--ease);
+      padding:var(--s-300);
+    }
+    .mobile-panel.open{opacity:1;visibility:visible}
+    .mobile-panel a{font-size:var(--fs-2xl);font-weight:600;padding:var(--s-100) var(--s-300);border-radius:4px;opacity:0;transform:translateY(24px);transition:opacity .5s var(--ease),transform .5s var(--ease),color .3s var(--ease)}
+    .mobile-panel.open a{opacity:1;transform:none}
+    .mobile-panel.open a:nth-child(1){transition-delay:0ms}
+    .mobile-panel.open a:nth-child(2){transition-delay:60ms}
+    .mobile-panel.open a:nth-child(3){transition-delay:120ms}
+    .mobile-panel.open a:nth-child(4){transition-delay:180ms}
+    .mobile-panel.open a:nth-child(5){transition-delay:240ms}
+    .mobile-panel a:hover{color:var(--accent-bright)}
+    .craft-step{grid-template-columns:1fr;gap:var(--s-400);padding-block:var(--s-600)}
+    .craft-step figure img{aspect-ratio:4/3}
+  }
+  @media (max-width:620px){
+    .wrap{padding-inline:var(--s-300)}
+    .hero h1{font-size:var(--fs-4xl)}
+    .h2{font-size:var(--fs-3xl)}
+    .tagline p{font-size:var(--fs-2xl)}
+    .section{padding-block:var(--s-800)}
+    .tagline{padding-block:var(--s-800)}
+    .ending h2{font-size:var(--fs-4xl)}
+    .ending .ghost-word{font-size:110px}
+    .value-list li{grid-template-columns:1fr;gap:var(--s-25)}
+    .hero-foot{flex-direction:column;gap:var(--s-75)}
+    .footer-inner{flex-direction:column;align-items:flex-start}
+    .craft-step .ghost{font-size:var(--fs-7xl)}
+  }
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#what">跳到主要内容</a>
+
+<header class="nav-wrap">
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" href="#top">苏绣</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-panel" aria-label="打开菜单">
+      <span class="bar"></span><span class="bar"></span>
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#what">是什么</a></li>
+      <li><a href="#craft">工艺</a></li>
+      <li><a href="#technique">技法</a></li>
+      <li><a href="#value">价值</a></li>
+      <li><a href="#faq">问答</a></li>
+    </ul>
+  </nav>
+</header>
+
+<nav class="mobile-panel" id="mobile-panel" aria-label="移动导航" aria-hidden="true">
+  <a href="#what">是什么</a>
+  <a href="#craft">工艺</a>
+  <a href="#technique">技法</a>
+  <a href="#value">价值</a>
+  <a href="#faq">问答</a>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="hero-meta">
+        <span>国家级非物质文化遗产 · 江苏苏州</span>
+        <span>CHAPTER 01</span>
+      </div>
+      <h1 class="h1" id="hero-title">一针一线，<br>把<span class="hl">江南</span>绣进丝里</h1>
+      <p class="body">苏绣，以苏州为中心的刺绣技艺，中国四大名绣之一。它用细如发丝的丝线，在绸缎上绣出花鸟、山水，也绣出光阴。</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="#what">
+          了解这门手艺
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="hero-foot">
+        <span>2006 年列入第一批国家级非遗名录</span>
+        <span>向下滚动 ↓</span>
+      </div>
+    </div>
+    <figure class="hero-media">
+      <img src="images/hero.png" alt="圆形绣绷上绷着白绸，绣着花鸟纹样的苏绣作品，丝线在光下泛着柔和光泽" width="1536" height="1024" loading="eager">
+      <figcaption>苏绣花鸟绣品（示意图）</figcaption>
+    </figure>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span>劈丝</span><span class="dot"></span><span>上绷</span><span class="dot"></span><span>落针</span><span class="dot"></span><span>装裱</span><span class="dot"></span><span>双面绣</span><span class="dot"></span><span>乱针绣</span><span class="dot"></span>
+      </div>
+      <div class="marquee-group">
+        <span>劈丝</span><span class="dot"></span><span>上绷</span><span class="dot"></span><span>落针</span><span class="dot"></span><span>装裱</span><span class="dot"></span><span>双面绣</span><span class="dot"></span><span>乱针绣</span><span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAGLINE -->
+  <section class="tagline" aria-label="主题标语">
+    <div class="wrap"><p id="tagline">把一根丝，劈到极细；把一段光阴，绣进布里。</p></div>
+  </section>
+
+  <!-- WHAT -->
+  <section class="section wrap" id="what" aria-labelledby="what-title">
+    <div class="chapter reveal"><span class="n">02</span><span>它是什么</span><span class="rule"></span></div>
+    <div class="what-head">
+      <h2 class="h2 reveal" id="what-title">以针为笔，<br>以线为色</h2>
+      <p class="body reveal">苏绣是用针引线，在绸缎等织物上绣出图案的传统技艺。它以“平、齐、细、密、匀、顺、和、光”八个字著称：绣面平整、针脚齐整、丝缕纤细、排布紧密，光泽柔和，正反皆可观赏。</p>
+    </div>
+    <div class="features">
+      <article class="feature reveal">
+        <span class="idx">01 · 细</span>
+        <h3 class="h3">一根丝，分成数十缕</h3>
+        <p class="body">绣娘把蚕丝分得越细，绣面越柔，颜色的过渡也越自然。</p>
+      </article>
+      <article class="feature reveal">
+        <span class="idx">02 · 双面</span>
+        <h3 class="h3">正反两面，都是画</h3>
+        <p class="body">双面绣的针脚在薄纱中穿行，两面互不影响，考验眼与手的极致控制。</p>
+      </article>
+      <article class="feature reveal">
+        <span class="idx">03 · 像画</span>
+        <h3 class="h3">以针代笔，以线代色</h3>
+        <p class="body">花鸟的羽毛、猫眼的瞳光，都能靠丝线的走向与深浅表现出来。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CRAFT -->
+  <section class="section wrap" id="craft" aria-labelledby="craft-title">
+    <div class="chapter reveal"><span class="n">03</span><span>工艺</span><span class="rule"></span></div>
+    <div class="what-head">
+      <h2 class="h2 reveal" id="craft-title">四步，<br>把丝线变成画</h2>
+      <p class="body reveal">从一根丝到一幅作品，中间没有捷径。每一步都靠手上的经验和耐心。</p>
+    </div>
+
+    <div class="craft-layout">
+      <aside class="craft-rail reveal" aria-label="工艺步骤导航">
+        <p class="rail-title">STEP · 01 — 04</p>
+        <ol class="rail-list">
+          <li class="rail-item active" data-step="0"><a href="#step-1"><span class="rn">01</span><span>劈丝</span></a></li>
+          <li class="rail-item" data-step="1"><a href="#step-2"><span class="rn">02</span><span>上绷起稿</span></a></li>
+          <li class="rail-item" data-step="2"><a href="#step-3"><span class="rn">03</span><span>落针刺绣</span></a></li>
+          <li class="rail-item" data-step="3"><a href="#step-4"><span class="rn">04</span><span>落绷装裱</span></a></li>
+        </ol>
+      </aside>
+
+      <div class="craft-steps">
+        <article class="craft-step reveal" id="step-1">
+          <figure><img src="images/step1-split.png" alt="绣娘的双手正在劈丝，把一根蚕丝分成几股更细的丝线" width="1024" height="1024" loading="lazy"></figure>
+          <div>
+            <div class="ghost">01</div>
+            <h3 class="h3">劈丝</h3>
+            <p class="body">把一根蚕丝线分成更细的丝缕，再按颜色和浓淡归类。丝越细，绣出来的层次越柔和。</p>
+            <p class="tip">这一步决定了绣面的细腻程度，也最考验手感。</p>
+          </div>
+        </article>
+
+        <article class="craft-step reveal" id="step-2">
+          <figure><img src="images/step2-frame.png" alt="木质绣架上绷紧着乳白色绸布，布面平整，上面有淡淡的花鸟底稿" width="1024" height="1024" loading="lazy"></figure>
+          <div>
+            <div class="ghost">02</div>
+            <h3 class="h3">上绷起稿</h3>
+            <p class="body">把底料绷紧在绣架上，布面平整如镜，再把设计好的图案描到布上，作为下针的依据。</p>
+            <p class="tip">布绷得够紧，针脚才走得稳、走得匀。</p>
+          </div>
+        </article>
+
+        <article class="craft-step reveal" id="step-3">
+          <figure><img src="images/step3-needle.png" alt="手指捏针穿引红线，绣面上一朵花正在成形，旁边散落着红绿蓝多种丝线" width="1024" height="1024" loading="lazy"></figure>
+          <div>
+            <div class="ghost">03</div>
+            <h3 class="h3">落针刺绣</h3>
+            <p class="body">以针代笔，一针一针把颜色和光影绣出来。针法有平针、乱针等，靠的是长年练出的手感。</p>
+            <p class="tip">同一片花瓣，换一种走针方向，质感就完全不同。</p>
+          </div>
+        </article>
+
+        <article class="craft-step reveal" id="step-4">
+          <figure><img src="images/step4-finish.png" alt="装裱完成的苏绣花鸟作品，丝线在光下呈现细腻光泽" width="1024" height="1024" loading="lazy"></figure>
+          <div>
+            <div class="ghost">04</div>
+            <h3 class="h3">落绷装裱</h3>
+            <p class="body">绣完取下、修整边缘，再装裱成屏、成画，成为可以挂起来看很久的作品。</p>
+            <p class="tip">装裱是最后一关，直接决定作品最终的样子。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNIQUE -->
+  <section class="technique" id="technique" aria-labelledby="tech-title">
+    <figure class="tech-media">
+      <img src="images/double-sided.png" alt="一幅苏绣双面绣屏风，绣在半透明薄纱上，正反两面各有一只猫的图案" width="1536" height="1024" loading="lazy">
+    </figure>
+    <div class="tech-copy">
+      <p class="eyebrow reveal">04 · 技法</p>
+      <h2 class="h2 reveal" id="tech-title">双面绣：<br>正反，都是画</h2>
+      <p class="body reveal">在薄如蝉翼的底料上，同一块区域的正反两面各绣一幅完整的画。针脚不能穿透到另一面，起针、收针、换色都要藏得无影无踪。</p>
+      <ul class="mini-list reveal">
+        <li>双面绣：正反两面都成画，常见于屏风与团扇。</li>
+        <li>乱针绣：以长短交叉的针法表现光影与色彩层次。</li>
+        <li>一件精细的双面绣，往往要花上数月。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- VALUE -->
+  <section class="section wrap" id="value" aria-labelledby="value-title">
+    <div class="chapter reveal"><span class="n">05</span><span>为什么珍贵</span><span class="rule"></span></div>
+    <div class="value-head">
+      <h2 class="h2 reveal" id="value-title">机器复制不了的，<br>是手上的分寸</h2>
+      <p class="body reveal">一件苏绣的价值，不在图案本身，而在那些看不见的时间里。</p>
+    </div>
+    <div class="value-grid">
+      <figure class="reveal">
+        <img src="images/texture.png" alt="排列整齐的彩色蚕丝线束微距特写，丝线细密有光泽" width="1536" height="1024" loading="lazy">
+      </figure>
+      <ul class="value-list reveal">
+        <li><strong>全靠手工</strong><span>机器能复制图案，却复制不了丝线在光下那种细腻的层次。</span></li>
+        <li><strong>时间成本</strong><span>一件精细作品，常以月计。慢，是它的基本要求。</span></li>
+        <li><strong>靠人传承</strong><span>针法、配色、手感，多在师徒之间口传心授，无法速成。</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section wrap" id="faq" aria-labelledby="faq-title">
+    <div class="chapter reveal"><span class="n">06</span><span>常见问题</span><span class="rule"></span></div>
+    <div class="faq-head">
+      <h2 class="h2 reveal" id="faq-title">想了解的几个问题</h2>
+      <p class="body reveal">关于苏绣最常见的疑问，一次说清。</p>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>苏绣是什么？<span class="plus" aria-hidden="true"></span></summary>
+        <div class="answer">苏绣是发源于江苏苏州一带的刺绣技艺，以精细、雅洁著称，与湘绣、粤绣、蜀绣并称中国四大名绣，2006 年被列入第一批国家级非物质文化遗产名录。</div>
+      </details>
+      <details>
+        <summary>苏绣和其他名绣有什么不同？<span class="plus" aria-hidden="true"></span></summary>
+        <div class="answer">相对而言，苏绣更讲究“细”和“雅”：丝线劈得更细，配色偏柔和，题材多为花鸟、山水、人物，追求接近绘画的效果。</div>
+      </details>
+      <details>
+        <summary>双面绣难在哪里？<span class="plus" aria-hidden="true"></span></summary>
+        <div class="answer">难在同一块底料的正反两面都要成画，而且针脚不能穿透、线头要完全藏住。起针、收针、换色都在极小的空间里完成，对眼力和手上功夫要求极高。</div>
+      </details>
+      <details>
+        <summary>一幅苏绣要做多久？<span class="plus" aria-hidden="true"></span></summary>
+        <div class="answer">看题材和精细程度。小幅简单作品可能几周，精细的双面绣或大幅作品往往需要数月甚至更久。</div>
+      </details>
+      <details>
+        <summary>普通人可以学苏绣吗？<span class="plus" aria-hidden="true"></span></summary>
+        <div class="answer">可以。通常从最基础的平针练起，先练针脚均匀，再学配色与劈丝。很多地方有非遗体验课和工坊，可以亲手试一次。</div>
+      </details>
+      <details>
+        <summary>苏绣现在还传承得好吗？<span class="plus" aria-hidden="true"></span></summary>
+        <div class="answer">苏绣仍是活跃的非遗项目，有国家级和省级代表性传承人，也常与服装、文创、艺术设计结合，出现在今天的生活里。</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ENDING -->
+  <section class="ending">
+    <span class="ghost-word" aria-hidden="true">苏绣</span>
+    <p class="eyebrow reveal">一针一线</p>
+    <h2 class="h2 reveal">有些手艺，<br>快不得</h2>
+    <p class="body reveal">如果你也被这一针一线打动，不妨去找一次身边的非遗体验，亲手穿一次针。</p>
+    <a class="btn btn-cream reveal" href="#top">
+      回到顶部
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="footer-inner">
+    <p class="footer-note">苏绣 · 非遗科普页。文字内容整理自公开资料，仅供学习与展示；页面图片为 AI 生成的示意图，非真实文物照片。</p>
+    <nav class="footer-links" aria-label="页脚导航">
+      <a href="#what">是什么</a>
+      <a href="#craft">工艺</a>
+      <a href="#technique">技法</a>
+      <a href="#faq">问答</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    "use strict";
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* nav toggle */
+    var nav = document.querySelector(".nav");
+    var toggle = document.querySelector(".nav-toggle");
+    var panel = document.getElementById("mobile-panel");
+    function closeMenu(){
+      nav.classList.remove("open");
+      if (panel){ panel.classList.remove("open"); panel.setAttribute("aria-hidden","true"); }
+      toggle.setAttribute("aria-expanded","false");
+      toggle.setAttribute("aria-label","打开菜单");
+      document.body.style.overflow = "";
+    }
+    if (toggle){
+      toggle.addEventListener("click", function(){
+        var open = nav.classList.toggle("open");
+        if (panel){ panel.classList.toggle("open", open); panel.setAttribute("aria-hidden", open ? "false" : "true"); }
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "关闭菜单" : "打开菜单");
+        document.body.style.overflow = open ? "hidden" : "";
+      });
+      document.querySelectorAll(".nav-menu a, .mobile-panel a").forEach(function(a){
+        a.addEventListener("click", closeMenu);
+      });
+      window.addEventListener("keydown", function(e){
+        if (e.key === "Escape") closeMenu();
+      });
+    }
+
+    /* scroll reveal */
+    var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+    if (reduce || !("IntersectionObserver" in window)){
+      reveals.forEach(function(el){ el.classList.add("in"); });
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting){
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.14, rootMargin: "0px 0px -6% 0px" });
+      reveals.forEach(function(el){ io.observe(el); });
+    }
+
+    /* tagline word by word */
+    var tagline = document.getElementById("tagline");
+    var words = [];
+    if (tagline){
+      var text = tagline.textContent.trim();
+      tagline.textContent = "";
+      Array.from(text).forEach(function(ch){
+        var span = document.createElement("span");
+        span.className = "w" + ("丝光阴".indexOf(ch) > -1 ? " key" : "");
+        span.textContent = ch === " " ? "\u00A0" : ch;
+        tagline.appendChild(span);
+        words.push(span);
+      });
+    }
+    function paintTagline(){
+      var trigger = window.innerHeight * 0.82;
+      for (var i = 0; i < words.length; i++){
+        var r = words[i].getBoundingClientRect();
+        if (r.top < trigger){ words[i].classList.add("on"); }
+      }
+    }
+    if (reduce){
+      words.forEach(function(w){ w.classList.add("on"); });
+    } else {
+      var ticking = false;
+      function onScroll(){
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function(){ paintTagline(); ticking = false; });
+      }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+      paintTagline();
+    }
+
+    /* active nav link */
+    var links = Array.prototype.slice.call(document.querySelectorAll(".nav-menu a"));
+    var map = {};
+    links.forEach(function(a){ map[a.getAttribute("href").slice(1)] = a; });
+    var ids = ["what","craft","technique","value","faq"];
+    var sections = ids.map(function(id){ return document.getElementById(id); }).filter(Boolean);
+    if (sections.length && "IntersectionObserver" in window){
+      var navIo = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting){
+            links.forEach(function(a){ a.removeAttribute("aria-current"); });
+            var a = map[e.target.id];
+            if (a) a.setAttribute("aria-current","true");
+          }
+        });
+      }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+      sections.forEach(function(s){ navIo.observe(s); });
+    }
+
+    /* craft rail active */
+    var railItems = Array.prototype.slice.call(document.querySelectorAll(".rail-item"));
+    var steps = Array.prototype.slice.call(document.querySelectorAll(".craft-step"));
+    if (railItems.length && steps.length && "IntersectionObserver" in window){
+      var railIo = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting){
+            var idx = steps.indexOf(e.target);
+            railItems.forEach(function(it){ it.classList.remove("active"); });
+            if (railItems[idx]) railItems[idx].classList.add("active");
+          }
+        });
+      }, { rootMargin: "-42% 0px -52% 0px", threshold: 0 });
+      steps.forEach(function(s){ railIo.observe(s); });
+    }
+  })();
+</script>
+</body>
+</html>
