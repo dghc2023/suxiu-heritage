@@ -671,6 +671,19 @@
         });
       }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
       sections.forEach(function(s){ navIo.observe(s); });
+
+      /* clear active link when back at top */
+      var navTick = false;
+      window.addEventListener("scroll", function(){
+        if (navTick) return;
+        navTick = true;
+        requestAnimationFrame(function(){
+          if (window.scrollY < window.innerHeight * 0.5){
+            links.forEach(function(a){ a.removeAttribute("aria-current"); });
+          }
+          navTick = false;
+        });
+      }, { passive: true });
     }
 
     /* craft rail active */
