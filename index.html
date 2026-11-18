@@ -116,14 +116,17 @@
   .nav.open .nav-toggle .bar:nth-child(2){transform:translate(-50%,-50%) rotate(-45deg)}
 
   /* ---- hero ---- */
-  .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:100svh;background:var(--ink)}
-  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:var(--s-1000) var(--s-700) var(--s-700);color:var(--cream)}
+  .hero{position:relative;min-height:100svh;background:var(--ink) url("images/hero.png") center/cover no-repeat;overflow:hidden}
+  .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:rgba(18,14,10,.5)}
+  .hero-inner{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-top:var(--s-1000);padding-bottom:var(--s-700);color:var(--cream)}
   .hero-meta{display:flex;justify-content:space-between;align-items:center;gap:var(--s-200);font-size:var(--fs-xs);letter-spacing:.18em;color:var(--muted-dark);border-bottom:1px solid var(--line-dark);padding-bottom:var(--s-200)}
-  .hero h1{margin:var(--s-600) 0 var(--s-300);color:var(--cream);max-width:560px}
+  .hero-main{margin-block:auto;padding-block:var(--s-700)}
+  .hero h1{margin:0 0 var(--s-300);color:var(--cream);max-width:780px;text-shadow:0 2px 24px rgba(0,0,0,.35)}
   .hero h1 .hl{color:var(--accent-bright)}
-  .hero .body{color:var(--muted-dark);max-width:440px}
+  .hero .body{color:#E2D8C7;max-width:460px;text-shadow:0 1px 16px rgba(0,0,0,.4)}
   .hero-cta{margin-top:var(--s-500);display:flex;align-items:center;gap:var(--s-300);flex-wrap:wrap}
-  .hero-foot{margin-top:auto;padding-top:var(--s-700);display:flex;justify-content:space-between;gap:var(--s-200);font-size:var(--fs-xs);color:var(--muted-dark);letter-spacing:.08em}
+  .hero-foot{display:flex;justify-content:space-between;gap:var(--s-200);font-size:var(--fs-xs);color:var(--muted-dark);letter-spacing:.08em}
 
   .btn{display:inline-flex;align-items:center;gap:var(--s-75);padding:var(--s-100) var(--s-300);border-radius:4px;border:1px solid transparent;font-size:var(--fs-sm);font-weight:600;line-height:1.5;cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease),transform .3s var(--ease),border-color .3s var(--ease)}
   .btn svg{width:16px;height:16px;transition:transform .3s var(--ease)}
@@ -133,10 +136,6 @@
   .btn-accent:hover{background:var(--accent-bright)}
   .btn-cream{background:transparent;border-color:var(--line-dark);color:var(--cream)}
   .btn-cream:hover{border-color:var(--cream);background:rgba(242,234,218,.06)}
-
-  .hero-media{position:relative;overflow:hidden;min-height:560px}
-  .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .hero-media figcaption{position:absolute;left:var(--s-300);bottom:var(--s-300);background:rgba(23,19,15,.62);color:var(--cream);font-size:var(--fs-xs);letter-spacing:.1em;padding:var(--s-75) var(--s-100);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 
   /* ---- marquee ---- */
   .marquee{background:var(--accent);color:var(--cream);overflow:hidden;border-block:1px solid var(--accent)}
@@ -253,6 +252,7 @@
   @media (prefers-reduced-motion: reduce){
     .reveal{opacity:1 !important;transform:none !important;transition:none !important}
     .tagline .w{opacity:1 !important;transition:none !important}
+    .hero-video{display:none}
     .marquee-track{animation:none}
     *{animation-duration:.001ms !important;animation-iteration-count:1 !important}
     .craft-step figure img,.value-grid img{transition:none}
@@ -260,16 +260,13 @@
 
   /* ---- responsive ---- */
   @media (max-width:1080px){
-    .hero-copy{padding:var(--s-1000) var(--s-500) var(--s-600)}
     .hero h1{font-size:var(--fs-6xl)}
     .h2{font-size:var(--fs-4xl)}
     .tagline p{font-size:var(--fs-5xl)}
     .value-grid,.tech-media{min-height:0}
   }
   @media (max-width:900px){
-    .hero{grid-template-columns:1fr;min-height:auto}
-    .hero-copy{padding:var(--s-1000) var(--s-300) var(--s-700);min-height:78svh}
-    .hero-media{min-height:0;height:62vw;max-height:520px}
+    .hero-inner{padding-top:var(--s-900)}
     .what-head,.value-head,.faq-head{grid-template-columns:1fr;gap:var(--s-300);align-items:start}
     .craft-layout{grid-template-columns:1fr}
     .craft-rail{display:none}
@@ -351,28 +348,30 @@
 <main>
   <!-- HERO -->
   <section class="hero" id="hero" aria-labelledby="hero-title">
-    <div class="hero-copy">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="images/hero.png" aria-hidden="true">
+      <source src="苏绣·丝语光影-001.mp4" type="video/mp4">
+    </video>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-inner wrap">
       <div class="hero-meta">
         <span>国家级非物质文化遗产 · 江苏苏州</span>
         <span>CHAPTER 01</span>
       </div>
-      <h1 class="h1" id="hero-title">一针一线，<br>把<span class="hl">江南</span>绣进丝里</h1>
-      <p class="body">苏绣，以苏州为中心的刺绣技艺，中国四大名绣之一。它用细如发丝的丝线，在绸缎上绣出花鸟、山水，也绣出光阴。</p>
-      <div class="hero-cta">
-        <a class="btn btn-accent" href="#what">
-          了解这门手艺
-          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+      <div class="hero-main">
+        <h1 class="h1" id="hero-title">一针一线，<br>把<span class="hl">江南</span>绣进丝里</h1>
+        <p class="body">苏绣，以苏州为中心的刺绣技艺，中国四大名绣之一。它用细如发丝的丝线，在绸缎上绣出花鸟、山水，也绣出光阴。</p>
+        <div class="hero-cta">
+          <a class="btn btn-accent" href="#what">
+            了解这门手艺
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
       </div>
       <div class="hero-foot">
         <span>2006 年列入第一批国家级非遗名录</span>
         <span>向下滚动 ↓</span>
       </div>
     </div>
-    <figure class="hero-media">
-      <img src="images/hero.png" alt="圆形绣绷上绷着白绸，绣着花鸟纹样的苏绣作品，丝线在光下泛着柔和光泽" width="1536" height="1024" loading="eager">
-      <figcaption>苏绣花鸟绣品（示意图）</figcaption>
-    </figure>
   </section>
 
   <!-- MARQUEE -->
@@ -581,6 +580,23 @@
   (function(){
     "use strict";
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* hero video: respect reduced motion, pause when off screen */
+    var heroVideo = document.querySelector(".hero-video");
+    if (heroVideo){
+      if (reduce){
+        heroVideo.removeAttribute("autoplay");
+        heroVideo.pause();
+      } else if ("IntersectionObserver" in window){
+        var heroIo = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting){ heroVideo.play().catch(function(){}); }
+            else { heroVideo.pause(); }
+          });
+        }, { threshold: 0.05 });
+        heroIo.observe(document.getElementById("hero"));
+      }
+    }
 
     /* nav toggle */
     var nav = document.querySelector(".nav");
