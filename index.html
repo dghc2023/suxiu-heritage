@@ -137,14 +137,6 @@
   .btn-cream{background:transparent;border-color:var(--line-dark);color:var(--cream)}
   .btn-cream:hover{border-color:var(--cream);background:rgba(242,234,218,.06)}
 
-  /* ---- marquee ---- */
-  .marquee{background:var(--accent);color:var(--cream);overflow:hidden;border-block:1px solid var(--accent)}
-  .marquee-track{display:flex;width:max-content;animation:marquee 34s linear infinite}
-  .marquee-group{display:flex;align-items:center;gap:var(--s-600);padding:var(--s-200) var(--s-300);white-space:nowrap}
-  .marquee-group span{font-size:var(--fs-xl);letter-spacing:.14em}
-  .marquee-group .dot{width:5px;height:5px;border-radius:999px;background:var(--cream);opacity:.6}
-  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
   /* ---- chapter label ---- */
   .chapter{display:flex;align-items:center;gap:var(--s-200);font-size:var(--fs-xs);letter-spacing:.2em;color:var(--muted);margin-bottom:var(--s-600)}
   .chapter .n{color:var(--accent);font-weight:600}
@@ -253,7 +245,6 @@
     .reveal{opacity:1 !important;transform:none !important;transition:none !important}
     .tagline .w{opacity:1 !important;transition:none !important}
     .hero-video{display:none}
-    .marquee-track{animation:none}
     *{animation-duration:.001ms !important;animation-iteration-count:1 !important}
     .craft-step figure img,.value-grid img{transition:none}
   }
@@ -277,7 +268,6 @@
     .value-grid{grid-template-columns:1fr;gap:var(--s-500)}
     .value-grid img{aspect-ratio:4/3}
     .ending .ghost-word{font-size:180px}
-    .marquee-group span{font-size:var(--fs-lg)}
   }
   @media (max-width:840px){
     .nav{width:100%;justify-content:space-between;padding:var(--s-50) var(--s-75) var(--s-50) var(--s-300);border-radius:999px}
@@ -373,18 +363,6 @@
       </div>
     </div>
   </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <div class="marquee-group">
-        <span>劈丝</span><span class="dot"></span><span>上绷</span><span class="dot"></span><span>落针</span><span class="dot"></span><span>装裱</span><span class="dot"></span><span>双面绣</span><span class="dot"></span><span>乱针绣</span><span class="dot"></span>
-      </div>
-      <div class="marquee-group">
-        <span>劈丝</span><span class="dot"></span><span>上绷</span><span class="dot"></span><span>落针</span><span class="dot"></span><span>装裱</span><span class="dot"></span><span>双面绣</span><span class="dot"></span><span>乱针绣</span><span class="dot"></span>
-      </div>
-    </div>
-  </div>
 
   <!-- TAGLINE -->
   <section class="tagline" aria-label="主题标语">
