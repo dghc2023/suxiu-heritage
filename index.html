@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="苏绣｜一针一线，把江南绣进丝里">
 <meta property="og:description" content="从劈丝到装裱，看一根丝线如何绣成一幅画。">
-<meta property="og:image" content="images/hero.png">
+<meta property="og:image" content="https://dghc2023.github.io/suxiu-heritage/images/hero.webp">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23A63A32'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23F4EFE4' font-family='serif'%3E苏%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,7 +116,7 @@
   .nav.open .nav-toggle .bar:nth-child(2){transform:translate(-50%,-50%) rotate(-45deg)}
 
   /* ---- hero ---- */
-  .hero{position:relative;min-height:100svh;background:var(--ink) url("images/hero.png") center/cover no-repeat;overflow:hidden}
+  .hero{position:relative;min-height:100svh;background:var(--ink) url("images/hero.webp") center/cover no-repeat;overflow:hidden}
   .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
   .hero-scrim{position:absolute;inset:0;z-index:1;background:rgba(18,14,10,.5)}
   .hero-inner{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-top:var(--s-1000);padding-bottom:var(--s-700);color:var(--cream)}
@@ -338,8 +338,8 @@
 <main>
   <!-- HERO -->
   <section class="hero" id="hero" aria-labelledby="hero-title">
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="images/hero.png" aria-hidden="true">
-      <source src="苏绣·丝语光影-001.mp4" type="video/mp4">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="images/hero.webp" aria-hidden="true">
+      <source src="videos/hero.mp4" type="video/mp4">
     </video>
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-inner wrap">
@@ -416,7 +416,7 @@
 
       <div class="craft-steps">
         <article class="craft-step reveal" id="step-1">
-          <figure><img src="images/step1-split.png" alt="绣娘的双手正在劈丝，把一根蚕丝分成几股更细的丝线" width="1024" height="1024" loading="lazy"></figure>
+          <figure><img src="images/step1-split.webp" alt="绣娘的双手正在劈丝，把一根蚕丝分成几股更细的丝线" width="1024" height="1024" loading="lazy" decoding="async"></figure>
           <div>
             <div class="ghost">01</div>
             <h3 class="h3">劈丝</h3>
@@ -426,7 +426,7 @@
         </article>
 
         <article class="craft-step reveal" id="step-2">
-          <figure><img src="images/step2-frame.png" alt="木质绣架上绷紧着乳白色绸布，布面平整，上面有淡淡的花鸟底稿" width="1024" height="1024" loading="lazy"></figure>
+          <figure><img src="images/step2-frame.webp" alt="木质绣架上绷紧着乳白色绸布，布面平整，上面有淡淡的花鸟底稿" width="1024" height="1024" loading="lazy" decoding="async"></figure>
           <div>
             <div class="ghost">02</div>
             <h3 class="h3">上绷起稿</h3>
@@ -436,7 +436,7 @@
         </article>
 
         <article class="craft-step reveal" id="step-3">
-          <figure><img src="images/step3-needle.png" alt="手指捏针穿引红线，绣面上一朵花正在成形，旁边散落着红绿蓝多种丝线" width="1024" height="1024" loading="lazy"></figure>
+          <figure><img src="images/step3-needle.webp" alt="手指捏针穿引红线，绣面上一朵花正在成形，旁边散落着红绿蓝多种丝线" width="1024" height="1024" loading="lazy" decoding="async"></figure>
           <div>
             <div class="ghost">03</div>
             <h3 class="h3">落针刺绣</h3>
@@ -446,7 +446,7 @@
         </article>
 
         <article class="craft-step reveal" id="step-4">
-          <figure><img src="images/step4-finish.png" alt="装裱完成的苏绣花鸟作品，丝线在光下呈现细腻光泽" width="1024" height="1024" loading="lazy"></figure>
+          <figure><img src="images/step4-finish.webp" alt="装裱完成的苏绣花鸟作品，丝线在光下呈现细腻光泽" width="1024" height="1024" loading="lazy" decoding="async"></figure>
           <div>
             <div class="ghost">04</div>
             <h3 class="h3">落绷装裱</h3>
@@ -461,7 +461,7 @@
   <!-- TECHNIQUE -->
   <section class="technique" id="technique" aria-labelledby="tech-title">
     <figure class="tech-media">
-      <img src="images/double-sided.png" alt="一幅苏绣双面绣屏风，绣在半透明薄纱上，正反两面各有一只猫的图案" width="1536" height="1024" loading="lazy">
+      <img src="images/double-sided.webp" alt="一幅苏绣双面绣屏风，绣在半透明薄纱上，正反两面各有一只猫的图案" width="1536" height="1024" loading="lazy" decoding="async">
     </figure>
     <div class="tech-copy">
       <p class="eyebrow reveal">04 · 技法</p>
@@ -484,7 +484,7 @@
     </div>
     <div class="value-grid">
       <figure class="reveal">
-        <img src="images/texture.png" alt="排列整齐的彩色蚕丝线束微距特写，丝线细密有光泽" width="1536" height="1024" loading="lazy">
+        <img src="images/texture.webp" alt="排列整齐的彩色蚕丝线束微距特写，丝线细密有光泽" width="1536" height="1024" loading="lazy" decoding="async">
       </figure>
       <ul class="value-list reveal">
         <li><strong>全靠手工</strong><span>机器能复制图案，却复制不了丝线在光下那种细腻的层次。</span></li>
